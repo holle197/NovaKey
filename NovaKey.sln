@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaKey.Desktop", "src\Nova
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NovaKey.ExternalApi", "NovaKey.ExternalApi", "{E6947F73-3A22-C01B-0B00-A6977A2CB855}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novakey.ExternalApi.BlockChainApi", "src\NovaKey.ExternalApi\Novakey.ExternalApi.BlockChainApi\Novakey.ExternalApi.BlockChainApi.csproj", "{47E220B9-AAD2-4E35-AD6E-ECA89A701EA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaKey.ExternalApi.BlockChainApi", "src\NovaKey.ExternalApi\Novakey.ExternalApi.BlockChainApi\NovaKey.ExternalApi.BlockChainApi.csproj", "{47E220B9-AAD2-4E35-AD6E-ECA89A701EA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaKey.ExternalApi.PricesApi", "src\NovaKey.ExternalApi\NovaKey.ExternalApi.PricesApi\NovaKey.ExternalApi.PricesApi.csproj", "{36717132-98C4-416F-B968-552AD3FEB4CC}"
 EndProject
@@ -190,5 +190,8 @@ Global
 		{DD5EEE4B-15A2-46A3-A26B-47031ADD175A} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{7C985DD2-2216-4745-BFE0-22AE0BAAB763} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{C586EBFC-1894-4EBC-99A9-0CC18188C4C0} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98081760-F09A-4458-917E-D0C22550D859}
 	EndGlobalSection
 EndGlobal

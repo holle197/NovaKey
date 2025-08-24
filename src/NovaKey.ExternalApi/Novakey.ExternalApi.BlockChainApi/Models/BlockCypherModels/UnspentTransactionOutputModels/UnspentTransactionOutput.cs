@@ -22,7 +22,7 @@ namespace NovaKey.ExternalApi.BlockChainApi.Models.BlockCypherModels.UnspentTran
         [JsonPropertyName("confirmations")]
         public uint Confirmations { get; set; }
 
-        public decimal GetAmount()
+        public long GetAmount()
         {
             return Amount;
         }

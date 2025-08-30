@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NBitcoin.Altcoins" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NovaKey.ExternalApi\Novakey.ExternalApi.BlockChainApi\NovaKey.ExternalApi.BlockChainApi.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,10 +1,5 @@
 ﻿using NovaKey.ExternalApi.BlockChainApi.Providers.BlockCypher;
 using RichardSzalay.MockHttp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Novakey.ExternalApi.Tests.BlockChainApiTests.Mocking
 {

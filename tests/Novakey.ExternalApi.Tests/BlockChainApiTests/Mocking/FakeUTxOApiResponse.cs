@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Novakey.ExternalApi.Tests.BlockChainApiTests.Mocking
+﻿namespace Novakey.ExternalApi.Tests.BlockChainApiTests.Mocking
 {
     internal class FakeUTxOApiResponse
     {

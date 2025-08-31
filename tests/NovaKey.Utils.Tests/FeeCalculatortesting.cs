@@ -5,7 +5,7 @@ namespace NovaKey.Utils.Tests
     public class FeeCalculatortesting
     {
         [Fact]
-        public void BtcFeeCalculatorTesting_With_2_Inputs_And_2_Outputs_One_Segwit_Another_Legacy_Expecter_Result_2580()
+        public void BtcFeeCalculatorTesting_With_2_Inputs_And_2_Outputs_One_Segwit_Another_Legacy_Expecter_Result_2230()
         {
             var toAddresses = new List<ScryptPubKeyType_vBSize>() { ScryptPubKeyType_vBSize.Legacy,ScryptPubKeyType_vBSize.Segwit};
             var btcFee = FeeCalculator.BtcFee(1,toAddresses);

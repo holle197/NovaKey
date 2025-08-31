@@ -1,21 +1,35 @@
-﻿namespace NovaKey.Utils
+﻿using NovaKey.Utils.Enums;
+using System.ComponentModel;
+
+namespace NovaKey.Utils
 {
     public static class FeeCalculator
     {
-        /// <summary>
-        /// 180 (input) +  34 (output) + 10 (extra) = 224 bytes
-        /// each input must have at least 180 bytes and each output 34 bytes
-        /// and add extra 10 bytes for safety
-        /// multiple this result by 10 satoshi per byte (1 satoshi = 0.00000001 BTC)
-        /// </summary>
-        /// <param name="numOfInputs"></param>
-        /// <param name="numOfOutputs"></param>
-        /// <returns></returns>
-        public static long BtcFee(int numOfInputs, int numOfOutputs)
+        private const long satoshiPerByte = 10L;
+        //extra for safety
+        private const long extra = 10L;
+        //for now usi this as safe refference to add utxo as input as fee
+        //later add API call to fetch RAW tx to decide precisely amount of fee per utxo
+        private const long utxoMax_vB = 148L;
+       
+        public static long BtcFee(int numOfInputs, IEnumerable<ScryptPubKeyType_vBSize> outputs)
         {
-            int extra = 10;
-            int satoshiPerByte = 10;
-            return (numOfInputs * 180 + numOfOutputs * 34 + extra) * satoshiPerByte;
+            return (utxoMax_vB * numOfInputs + Calculate_vB_PerOutput(outputs) + extra) * satoshiPerByte;
         }
+
+        //calculating vB per output (for every address that we sending funds)
+        private static long Calculate_vB_PerOutput(IEnumerable<ScryptPubKeyType_vBSize> destinationAddresses)
+        {
+            long total = 0L;
+            foreach (var destinationAddresstype in destinationAddresses)
+            {
+                total += (long)destinationAddresstype;
+            }
+            return total;
+        }
+
+       
+
+
     }
 }

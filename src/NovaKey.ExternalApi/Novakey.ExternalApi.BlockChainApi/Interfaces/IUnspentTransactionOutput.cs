@@ -2,6 +2,10 @@
 {
     public interface IUnspentTransactionOutput
     {
+        //UTxO is OUTPUT of transaction
+        //when we creating new transaction and want to spend this UTxO
+        //this UTxO becoum INPUT in this new transaction
+
         //transaction hash
         string GetTransactionId();
         //represent previouse utxo that indexed address how much coins he sending to this address

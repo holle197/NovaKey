@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NovaKey.Utils.Enums;
 
 namespace NovaKey.Utils.Tests
 {
     public class FeeCalculatortesting
     {
         [Fact]
-        public void BtcFeeCalculatorTesting_With_2_Inputs_And_2_Outputs_Expecter_Result_2580()
+        public void BtcFeeCalculatorTesting_With_2_Inputs_And_2_Outputs_One_Segwit_Another_Legacy_Expecter_Result_2580()
         {
-            var btcFee = FeeCalculator.BtcFee(1, 2);
-
-            var expectedFee = 2580L;
+            var toAddresses = new List<ScryptPubKeyType_vBSize>() { ScryptPubKeyType_vBSize.Legacy,ScryptPubKeyType_vBSize.Segwit};
+            var btcFee = FeeCalculator.BtcFee(1,toAddresses);
+            //1 utxo = 148vB segwit 31vB legacy 34vB extra 10 = 223vB * 10 satoshi = 2230
+            var expectedFee = 2230;
             Assert.Equal(btcFee, expectedFee);
         }
     }

@@ -14,4 +14,8 @@
     <ProjectReference Include="..\NovaKey.ExternalApi\Novakey.ExternalApi.BlockChainApi\NovaKey.ExternalApi.BlockChainApi.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Helper\" />
+  </ItemGroup>
+
 </Project>

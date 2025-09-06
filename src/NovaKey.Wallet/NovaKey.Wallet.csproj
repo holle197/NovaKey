@@ -7,15 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Helper\**" />
+    <EmbeddedResource Remove="Helper\**" />
+    <None Remove="Helper\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NBitcoin.Altcoins" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NovaKey.ExternalApi\Novakey.ExternalApi.BlockChainApi\NovaKey.ExternalApi.BlockChainApi.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Helper\" />
+    <ProjectReference Include="..\NovaKey.Utils\NovaKey.Utils.csproj" />
   </ItemGroup>
 
 </Project>

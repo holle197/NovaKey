@@ -1,11 +1,7 @@
 ﻿using NBitcoin;
 using NovaKey.ExternalApi.BlockChainApi.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("NovaKey.Wallet.Tests")]
 namespace NovaKey.Wallet.Models
 {
     internal class BasicRawTransactionModel(Network network, Key key, BitcoinAddress address,

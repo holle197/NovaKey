@@ -15,6 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\NovaKey.ExternalApi\Novakey.ExternalApi.BlockChainApi\NovaKey.ExternalApi.BlockChainApi.csproj" />
+    <ProjectReference Include="..\..\src\NovaKey.Wallet\NovaKey.Wallet.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
 

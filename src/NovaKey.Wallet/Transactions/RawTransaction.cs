@@ -65,9 +65,9 @@ namespace NovaKey.Wallet.Transactions
             throw new NetworkException("Network Not Supported");
         }
 
-        private static List<ScryptPubKeyType> GetScryptPubKeyTypes(IEnumerable<BitcoinAddress> addresses)
+        private static List<ScriptPubKeyTypes> GetScriptPubKeyTypes(IEnumerable<BitcoinAddress> addresses)
         {
-            var types = new List<ScryptPubKeyType>();
+            var types = new List<ScriptPubKeyTypes>();
             foreach (var address in addresses)
             {
                 types.Add(address.GetScriptPubKeyType());
@@ -75,9 +75,9 @@ namespace NovaKey.Wallet.Transactions
             return types;
         }
 
-        private static List<ScryptPubKeyType_vBSize> ConvertScryptPubKeyTypeTo_vBSize(List<ScryptPubKeyType> types)
+        private static List<ScriptPubKeyType_vBSize> ConvertScriptPubKeyTypeTo_vBSize(List<ScriptPubKeyTypes> types)
         {
-            var vBSizes = new List<ScryptPubKeyType_vBSize>();
+            var vBSizes = new List<ScriptPubKeyType_vBSize>();
             foreach (var scryptType in types)
             {
                 vBSizes.Add(scryptType.Get_vBSize());

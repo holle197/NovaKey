@@ -11,7 +11,7 @@ namespace NovaKey.Utils
         //later add API call to fetch RAW tx to decide precisely amount of fee per utxo
         private const long utxoMax_vB = 148L;
        
-        public static long Calculate(int numOfInputs, IEnumerable<ScryptPubKeyType_vBSize> outputs,SatoshiPerByte satoshiPerByte)
+        public static long Calculate(int numOfInputs, IEnumerable<ScriptPubKeyType_vBSize> outputs,SatoshiPerByte satoshiPerByte)
         {
             return (utxoMax_vB * numOfInputs + Calculate_vB_PerOutput(outputs) + extra) * (long)satoshiPerByte;
         }
@@ -22,7 +22,7 @@ namespace NovaKey.Utils
         }
 
         //calculating vB per output (for every address that we sending funds)
-        private static long Calculate_vB_PerOutput(IEnumerable<ScryptPubKeyType_vBSize> destinationAddresses)
+        private static long Calculate_vB_PerOutput(IEnumerable<ScriptPubKeyType_vBSize> destinationAddresses)
         {
             long total = 0L;
             foreach (var destinationAddresstype in destinationAddresses)
